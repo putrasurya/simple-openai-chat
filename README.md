@@ -19,3 +19,6 @@ To deploy this project, follow these steps:
 3. Deploy `index.html` and `chat.js` to an AWS S3 bucket. Make sure to set the bucket to serve as hosting.
 
 After completing these steps, you should be able to navigate to the URL of your AWS S3 bucket and see the chat UI. You can then use the chat UI to communicate with the OpenAI API using the gpt-3.5-turbo model.
+
+## Links
+[https://platform.openai.com](https://platform.openai.com)
