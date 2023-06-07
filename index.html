@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat Application</title>
+  <link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
+  <style>
+    html {height: 100%;}
+    body {
+      background: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    /* CSS styles for the chat window */
+    .chat-window {
+      width: 100%;
+      border: 1px solid #ccc;
+      padding: 10px;
+      overflow-y: scroll;
+      flex-grow: 1;
+    }
+
+    /* CSS styles for the chat input area and button */
+    .chat-input {
+      display: flex;
+      margin-top: 10px;
+    }
+
+    .chat-input .bx--text-input {
+      flex: 1;
+      margin-right: 10px;
+    }
+
+    /* CSS styles for the loading UI */
+    .loading {
+      display: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      z-index: 2000;
+      background-color: white;
+      text-align: center;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="chat-window" id="chatWindow">
+    <!-- Chat messages will be dynamically added here -->
+  </div>
+  <div class="chat-input">
+    <textarea id="messageInput" class="bx--text-input" placeholder="Type a message"></textarea>
+    <button class="bx--btn bx--btn--primary" id="sendbutton">Send</button>
+  </div>
+  <div class="loading" id="loadingIndicator">
+    <svg class="bx--loading__svg" viewBox="-75 -75 150 150">
+      <circle cx="0" cy="0" r="37.5"></circle>
+    </svg>
+    <p>Sending...</p>
+  </div>
+  <script src="chat.js"></script>
+</body>
+</html>
